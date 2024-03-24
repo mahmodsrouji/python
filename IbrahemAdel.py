@@ -736,3 +736,14 @@ for person in attendees:
         print("Attendeance not confirmed!")
         print("-----")
 
+names = input("Enter the names of attendees separated by commas: ").split(", ")
+for name in names:
+    print(name)
+    commond = input("Is this person attending? (yes/no): ")
+    if commond == "yes":
+        print("Attendance Confirmed!")
+    else:
+        print("Attendeance not confirmed!")
+        print("-----")
+
+
