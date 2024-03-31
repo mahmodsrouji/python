@@ -1,0 +1,13 @@
+number = float(input("Enter the correct ambiguous number: \n"))
+if number == 7:
+    print("The number ambiguous is correct.")
+else:
+    print("Sorry, the number is not correct")
+
+# another code similar to this.
+guessed = int(input("please guess a number: \n"))
+correct_number = 7
+if correct_number == 7:
+    print("Good guess")
+else:
+    print(f"You guessed {guessed}, but yhe correct number is {correct_number}")

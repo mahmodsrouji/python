@@ -143,9 +143,9 @@ First_password = int(input("Enter your password: \n"))
 Second_password = int(input("Enter your password again to confirm: \n"))
 if First_password == Second_password:
     print("The operation is done")
-    The_password = int(input("please enter your password: \n"))
 else:
     print("Sorry, Passwords do not match!")
+    The_password = int(input("please enter your password: \n"))
 if First_password == Second_password == The_password:
     print("Welcome to your account")
 else:
@@ -232,7 +232,7 @@ else:
 #with "and"
 #another example.
 name = input("Please enter your name: \n")
-password = input ("Please enter your name: \n")
+password = input ("Please enter your password: \n")
 if name.lower() == "mahmoud" and password == "hiThere":
     print("Welcome back!")
 else:
@@ -462,10 +462,10 @@ library = []
 wishlist = []
 #Step 2: Adding Inivdiual Books
 book_name = input("Enter the name of a book you own: ")
-library.append(book)
+library.append(book_name)
 book_name = input("Enter the name of another book you own (or press 'Enter' to skip): ")
 if book_name:
-    library.append(book)
+    library.append(book_name)
     print("\nYour Library: ", library)
 #Step 3: Managing the Wishlist 
 book_name = input("Enter the name of the book you wish to have in the future: ")
@@ -483,7 +483,7 @@ if acquired_wishlist in wishlist:
     print("Updated Wishlist: ", wishlist)
 #Step 6: Donate books
 donated_book = input("Enter the name of the book form you library that you wish to donate or press 'Enter to skip): ")
-if donate_book in library:
+if donated_book in library:
     library.remove(donated_book)
 print("\nFinal Library after Donations: ", library)
 
@@ -549,9 +549,9 @@ print(basket)
 #made the project of the "rabbit"
 print("Welocme to place the rabbit\n")
 field = [["🌿", "🌿", "🌿"], ["🌿", "🌿", "🌿"], ["🌿", "🌿", "🌿"]]
-print(f"{field[0]} \n{field[1]} \n{field[2]}")
-print("\nWhere should the rabbit go?")
-position = (input("Please choose a row and a colmun "))
+print("\nWhere should the rabbit go? 🐇 ")
+print(f"\n{field[0]} \n{field[1]} \n{field[2]}\n")
+position = (input("Please choose a row and a colmun: "))
 row = int(position[0])
 colmun = int(position[1])
 field[row-1][colmun-1] = "🐇"
@@ -738,12 +738,150 @@ for person in attendees:
 
 names = input("Enter the names of attendees separated by commas: ").split(", ")
 for name in names:
-    print(name)
+    print("\n"+name+"\n")
     commond = input("Is this person attending? (yes/no): ")
     if commond == "yes":
         print("Attendance Confirmed!")
     else:
         print("Attendeance not confirmed!")
         print("-----")
+travel_list = input("Please type the names of the countries: ").split(", ")
+for country in  travel_list:
+    print(f"\n{country}\n")
+    visited = input(f"Have you ever visited {country} before? (yes,no)\n").lower()
+    if visited == "yes":
+        print("I hope you had a wonderful time \n")
+    else:
+        print("I hope you get to visit it soon \n")
+    print("------")
+input("Press enter to exit.....")
+
+
+# the episode 48:
+done_tasks = []
+ongoing_tasks = []
+tasks = input("Enter your tasks for today: ").split(", ")
+for task in tasks:
+    done = input(f"Did you finish {task} alredy? ").lower()
+    if done == "yes":
+        print("Nice Job")
+        done_tasks.append(task)
+    else:
+        print("Try not to put it off")
+        ongoing_tasks.append(task)
+    print("------------")
+progress = input("Do you want to see your today's progress?(yes, no)\n").lower()
+if progress == "yes":
+    print("\n******** Done Tasks ********\n")
+    print(done_tasks)
+    print("\n****** Ongoing Tasks ******\n")
+    print(ongoing_tasks)
+else:
+    input("Please hit Enter to exit ")
+
+# The second project is Multiplication table:
+print("*** Welcome to the multiplication table ***")
+number = int(input("Enter a number: "))
+print(f"\nMultiplication table for {number:} \n")
+for i in range (1,11):
+    result = number * i
+    print(f"{number} x {i} = {result}")
+
+# The project of the episode 48 "my work":
+items_list = []
+price_list = []
+print("***** Welcome to ishop calculator *****")
+numbers = int(input("how many items are there in your basket today? "))
+print("Let's get to counting them ....")
+for n in range(numbers):
+    items = input(f"Please tell me the name of the item number {n+1}: ")
+    items_list.append(items)
+    price = float(input(f"What is the price of {items}:\n$"))
+    price_list.append(price)
+command = input("Would you like to see your entire basket items? ").lower()
+if command == "yes":
+    print(items_list)
+    command_2 = input("Would you like to see how much it'll cost? ").lower()
+    if command_2 == "yes":
+        print(f"\nBuying these items will cost:\n${sum(price_list)}")
+    else:
+        input("Press Enter to exit ")
+else:
+    command_2 = input("Would you like to see how much it'll cost? ").lower()
+    if command_2 == "yes":
+        print(f"\nBuying these items will cost:\n${sum(price_list)}")
+    else:
+        input("Press Enter to exit ")
+
+
+# The episode 49:
+# The same project of the ibrahim work:
+items = []
+prices = []
+print("\n***** Welcome to ishop calculator *****\n")
+number_of_items = int(input("how many items are there in your basket today? "))
+
+if number_of_items > 0:
+    print("\nLet's get to counting them ....")
+    for i in range(0, number_of_items):
+        name = input(f"Please tell me the name of the item number {i+1}: ")
+        items.append(name)
+        price = float(input(f"What is the price of {name}:\n$"))
+        prices.append(price)
+
+    choice = input("Would you like to see your entire basket items? ").lower()
+    if choice == "yes":
+        print(items)
+        see_price = input("Would you like to see how much it'll cost? ").lower()  
+        if see_price == "yes":
+            print("\nBuying these items will cost:")
+            print(sum(prices))
+        else:
+            input("Press Enter to exit")
+    else:
+        input("Press Enter to exit")
+else:
+    print("Seems like you're not in the mood for shopping today")
+
+
+# The episode 50:
+numbers = [1,2,3,4,5]
+total = 0 
+print("Let's add each number to the next")
+for i in numbers:
+    total += i
+    print(f"-> {total}")
+    print(f"\nThe total number is: {total}\n")
+
+# Some informations.
+name = "Ibrahim"
+print("\n".join(name))
+names = ["Ibrahim", "Ben", "Cherry", "Decken", "Emily", "Samer", "Ali"]
+print(" \U0001F449 ".join(names))
+print(names[0:4])
+print(names[0:5:2])
+print(names[0:7 :2])
+
+
+# The episode 51:
+# The first project:
+list = []
+names = input("Enter the first and last name of your friends: ").split(", ")
+for name in names:
+    name_parts = name.split()
+    print(name_parts)
+    first_name = name_parts[0]
+    last_name = name_parts[1]
+    first_initial = first_name[0]
+    last_initial = last_name[0]
+    abbreviation = first_initial + "." + last_initial + "."
+    list.append(abbreviation)
+print("Abbreviated Names: ")
+for x in list:
+    print(x)
+
+
+
+
 
 

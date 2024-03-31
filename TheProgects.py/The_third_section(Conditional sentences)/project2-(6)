@@ -1,0 +1,23 @@
+number = float(input("Enter a number: \n"))
+if number > 0:
+    print("The number is positive")
+elif number < 0:
+    print("The number is negative")
+else:
+    print("The number is zero")
+
+#The project:
+    
+mark = float(input("Type the mark here to rate: \n"))
+if mark == 100:
+    print("This mark is an excellent grade!")  
+elif mark >= 90:
+    print("This mark is an excellent grade!")
+elif mark >= 75:
+    print("This mark is in a good grade!") 
+elif mark >= 50:
+    print("This mark is in an acceptable grade!")
+elif mark < 50:
+    print("you got an f grad!")
+else:
+    print("This number is not supported")

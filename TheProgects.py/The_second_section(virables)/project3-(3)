@@ -1,0 +1,15 @@
+total_seconds = input("Please type the number of seconds: \n")
+int_seconds = int(total_seconds)
+hours = int_seconds // 3600
+minutes = (int_seconds % 3600) // 60
+remaining_seconds = int_seconds % 60
+print("This course is:", str(hours), "hours and", str(minutes), "minutes and", str(remaining_seconds), "seconds long")
+#"or" print("This course is: " + str(hours) + " hours and " + str(minutes) + " minutes and " + str(remaining_seconds) + " seconds long.")
+
+# in a short way.
+
+seconds = int(input("Please type the number of seconds: \n"))
+hours = seconds // 3600
+minutes = (seconds % 3600) // 60
+remaining_seconds = seconds % 60
+print(f"This course is: {hours} hours and {minutes} minutes and {remaining_seconds} seconds long.")

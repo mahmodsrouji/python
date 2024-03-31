@@ -1,0 +1,7 @@
+#episode 21
+print("Welcome to my apllication.")
+age = int(input("how old are you? \n"))
+if age >= 12:
+    print("Good, you can use the app")
+else:
+    print("Sorry, you connot use the app.")

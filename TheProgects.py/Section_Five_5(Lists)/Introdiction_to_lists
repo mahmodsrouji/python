@@ -1,0 +1,34 @@
+#episode 34
+favorite_friends = ["Moafak", "Omar", "Mohamad", "Abdullah", "yazan"]
+print(favorite_friends [0])
+
+print(f"The first name on our list is {favorite_friends[0]} and the last name on our list is {favorite_friends[-1]}")
+
+surname1 = favorite_friends[0] = "Abu yazan"
+surname2 = favorite_friends[2] = "Abu elyas"
+print(f"I would like to name my first and third friends on the list by their surname like this {surname1} and {surname2}.")
+
+
+#episode 35
+color = []
+color.append("red")
+color.append("blue")
+print(color)
+
+#There is a mudule for combining two lists into one sentence!
+class_a = ["Tom","Silia", "Samer", "farah"]
+class_b = ["Andrew", "Hadi", "Tina", "Samar", "Jacks"]
+class_a.extend(class_b)
+print(class_a)
+#or,If we want to keep each list separate from the others, we have two ways:
+class_a = ["Tom","Silia", "Samer", "farah"]
+class_b = ["Andrew", "Hadi", "Tina", "Samar", "Jacks"]
+students = []
+students.extend(class_a)
+students.extend(class_b)
+print(students)
+#second way
+class_a = ["Tom","Silia", "Samer", "farah"]
+class_b = ["Andrew", "Hadi", "Tina", "Samar", "Jacks"]
+students = class_a + class_b
+print(students)

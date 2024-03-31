@@ -1,0 +1,12 @@
+#episode 41
+basket = [["Apples", "Bananas"] , ["Milk", "Water"]]
+print(basket)
+basket[0].insert(0,"Oranges")
+basket[0].insert(3,"Kiwis")
+basket[1].insert(0,"Coffee")
+basket[1].remove("Water")
+basket[1].insert(2,"Tea")
+basket.append([1, 2, 3])
+input("Press enter to vhange the contect .....")
+print("Here is the updated basket")
+print(basket)

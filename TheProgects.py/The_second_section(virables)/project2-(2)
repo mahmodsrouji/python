@@ -1,0 +1,39 @@
+str_length = input("please type length: \n")
+str_width = input("please type width: \n")
+length = float(str_length)
+width = float(str_width)
+area = length * width
+str_area = str(area)
+str_final_amount = input("How much for 1 meter? \n")
+float_final_amount = float(str_area) * float(str_final_amount)
+final_result = str(float_final_amount)
+print("The total area is: " + str_area)
+print("Give the guy:", final_result)
+#or print("Give the guy: "  +  final_result)
+
+#in an easier way
+
+str_length = input("Please type length: \n")
+str_width = input("please type width: \n")
+str_price = input("How much for 1 meter? \n")
+#convert type
+length = float(str_length)
+width = float(str_width)
+price = float(str_price)
+
+area = length * width
+total_price = price * area
+
+str_area = str(area)
+str_total_price = str(total_price)
+
+print("The total arae is: " + str_area)
+print("Give the guy: $" + str_total_price)
+
+# in a short way.
+
+length = float(input("please type length: \n"))
+width = float(input("please type length: \n"))
+price = float(input("How much for 1 meter: \n"))
+print("the total area is: ", str(length * width))
+print("Give the guy: $", length * width * price)

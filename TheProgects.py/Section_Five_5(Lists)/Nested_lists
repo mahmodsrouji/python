@@ -1,0 +1,17 @@
+#episode 40
+basket = [["'Apples'", "'Bananas'"] , ["'Milk'", "'Water'"]]
+basket2 = ["'Cake'", "'Candy'"]
+basket.append(basket2)
+print(basket)
+#in a shorter way.
+basket = [["'Apples'", "'Bananas'"] , ["'Milk'", "'Water'"]]
+basket.append(["'Cake'", "'Candy'"])
+print(basket)
+#We have a new module named 'Insert' whose function is to add new texts to the list, but with the ability to specify the place.
+books = ["Book2", "Book3", "Book5"]
+books.insert(0,"Book1")
+books.insert(3,"Book4")
+#if I want to add the 'book6' in the last, we have to optins:
+books.insert(5,"Book6")
+books.append("Book6")
+print(books)

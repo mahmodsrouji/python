@@ -1,0 +1,28 @@
+#episode 30
+import random
+my_random = random.randint(-5,5)
+print(my_random)
+
+import octucode
+print(octucode.course)
+
+
+#episode 31
+
+#First, I must determine the type of module that I want to work on!
+import random
+#second,I must write the random sentence I want, along with the conditions, and add it to a variable.
+PIN_number = random.randint(1000,9999)
+#third, I want to put the number chosen by the user into a variable through the input statement, and convert the word to a number (int).
+user_number = int(input("Enter a 4-digits pin number "))
+#After that, there are one of three conditions with their orders:
+#The first one, set a condition for the number that the user chose, whether it is four digits or not, while setting the “len” key to measure the length of the digits.
+if len(str(user_number)) != 4:
+    print("please enter 4 digits!")
+#second condition, Whether the user's number matches the random number chosen by the computer.
+elif PIN_number == user_number:
+    print("success! PIN code matched")
+#third condition, If the chosen number does not match the random number
+else:
+    print("Failure! PIN code number didn't match")
+    print(f"The computer generated this PIN {PIN_number}")

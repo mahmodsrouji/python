@@ -1,0 +1,11 @@
+is_syrian = input("Are you syria type (Yes) or (No) \n").lower()
+if is_syrian == "yes":
+    print("Good, that the first step")
+    is_18 = input("Are you above 18 type (yes) or (No)? \n").lower()
+    if is_18 == "yes":
+        print("You can have an ID")
+    else:
+        print("Sorry, you have to be 18 or older")
+        print("Please try again when you are 18")
+else:
+    print("Sorry, a syrian ID gves only to syrians!")

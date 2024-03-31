@@ -1,0 +1,11 @@
+age = int(input("How old are you? \n"))
+if age >= 18:
+    license = input("Do you have a license? Type (Yes) or (No) \n").lower()
+    if license == "yes":
+        print("You can drive as you wish")
+    elif license == "no":
+        print("Sorry, you cannot drive unlees you have a driving license!")
+    else:
+        print(f"Sorry you entery of {license} is not understood")
+else:
+    print("You cannot drive unless you are 18 with a driving license exclusively")

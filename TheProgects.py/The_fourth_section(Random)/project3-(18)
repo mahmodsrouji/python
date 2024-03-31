@@ -1,0 +1,22 @@
+#ُEpisode 38, 39, The project in other way
+import random
+print("Welcom to 'whose wallet?'")
+print("You will give me a list of name, and I will pick a person to pay")
+name = input("If you're ready, enter the names separated by a comma ")
+names = name.split(", ")
+length = len(names) -1
+random_number = random.randint(0,length)
+random_person = names[random_number]
+print(f"Please ask '{random_person}' to take his wallet out. Dinner is on him")
+
+#in an easier way, and with a new method name "choice"
+import random 
+print("Welcome to 'whose wallest?' ")
+print("You will give me a list of names, and I will pick a person to pay")
+names = input("If you're ready, enter the names separated by commas ").split(", ")
+print(f"Please ask '{random.choice(names) }' to take his wallet out. Dinner is on him")
+
+#The project in only three lines!
+import random 
+print("Welcome to 'whose wallest?' \n You will give me a list of names, and I will pick a person to pay randomly")
+print(f"Please ask '{random.choice(input("If you're ready, Enter the names separated by commas ").split(', '))} to take out his wallet. Dinner is on him! " )

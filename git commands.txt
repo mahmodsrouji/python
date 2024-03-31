@@ -1,3 +1,5 @@
+ls
+cd python
 git add .
 git commit -m "commit details"
 git push

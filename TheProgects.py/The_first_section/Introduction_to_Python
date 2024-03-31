@@ -1,0 +1,21 @@
+print('Hello, wourld')
+print("print('Hello, wourld')")
+print('I love python \n Python is very easy\nThis is a new line')
+print('Hello' + " " + 'there')
+user_name = input("what is your name?\n")
+print("Nice to meet you, " + user_name)
+print( len (user_name))
+user_PIN = input("What is your PIN number? \n")
+print(type (user_PIN))
+#another chapter
+print('Octucode' [2])
+#another thing
+PIN_number = (input("Enter your PIN number: \n"))
+print(len (PIN_number))
+#another thing,This is the order, if I forget the type of the variable in which I know the value
+print( type (3))
+print( type ("3"))
+print( type (False))
+print( type (4.2))
+user_PIN = input("What is your PIN number? \n")
+print(type (user_PIN))

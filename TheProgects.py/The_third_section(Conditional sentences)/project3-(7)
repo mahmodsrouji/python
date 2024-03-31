@@ -1,0 +1,11 @@
+First_password = int(input("Enter your password: \n"))
+Second_password = int(input("Enter your password again to confirm: \n"))
+if First_password == Second_password:
+    print("The operation is done")
+    The_password = int(input("please enter your password: \n"))
+    if Second_password == The_password:
+        print("Welcome to your account")
+    else:
+        print("The password is incorrect!")
+else:
+    print("Sorry, Passwords do not match!")

@@ -1,0 +1,12 @@
+#episode 18
+age = input("How old are you? \n")
+int_age = int(age)
+current_year = 2024
+born_in = (current_year - int_age)
+str_born_in = str(born_in)
+print("you were born in the year: " + str_born_in)
+
+# in a short way.
+
+age = int(input("How ald are you? \n"))
+print(f"You were born in the year {2024 - age} ")

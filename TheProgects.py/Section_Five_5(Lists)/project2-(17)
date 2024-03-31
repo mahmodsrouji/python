@@ -1,0 +1,72 @@
+my_library = []
+book = input("Enter the name of a book you own: ")
+my_library.append(book)
+book = input("Enter the name of another book you own (or press 'Enter' to skip): ")
+if book:
+    my_library.append(book)
+    print(f"Your Library: {my_library}")
+else:
+    print(f"Your Library: {my_library}")
+wishlist = []
+wishbook = input("Enter the name of the book you wish to have in the future: ")
+wishlist.append(wishbook)
+wishbook = input("Enter the name of another book you wish to have (or press'Enter' to skip): ")
+if wishbook:
+    wishlist.append(wishbook)
+    print(f"Your Wishlist: {wishlist}")
+else:
+    print(f"Your Wishlist: {wishlist}")
+acq_wishlist = input("Enter the name of the book from your wishlist that you've acquired (or press 'Enter' to skip): ")
+if acq_wishlist:
+    if acq_wishlist in wishlist:
+        my_library.append(acq_wishlist)
+        wishlist.remove(acq_wishlist)
+        print(f"Updated Library: {my_library}")
+        print(f"Updated Wishlist: {wishlist}")
+    else:
+        print(f"This book '{acq_wishlist}' is not in your Wishlist! ")     
+else:
+    print(f"Your Library: {my_library}")
+    print(f"Your Wishlist: {wishlist}")
+donate_book = input("Enter the name of the book form you library that you wish to donate or press 'Enter to skip): ")
+if donate_book:
+    if donate_book in my_library:
+        my_library.remove(donate_book)
+        print(f"Final Library after Donations: {my_library}")
+    else:
+        print(f"This book '{donate_book}' is not in your Library!")
+else:
+    print(f"Your Library still has: {my_library} ")
+
+
+
+#The project in brahim's way.
+#step 1: Setup
+library = []
+wishlist = []
+#Step 2: Adding Inivdiual Books
+book_name = input("Enter the name of a book you own: ")
+library.append(book_name)
+book_name = input("Enter the name of another book you own (or press 'Enter' to skip): ")
+if book_name:
+    library.append(book_name)
+    print("\nYour Library: ", library)
+#Step 3: Managing the Wishlist 
+book_name = input("Enter the name of the book you wish to have in the future: ")
+wishlist.append(book_name)
+book_name = input("Enter the name of another book you wish to have (or press'Enter' to skip): ")
+if book_name:
+    wishlist.append(book_name)
+    print("\nYour Wishlist: ", wishlist)
+#step 4: Merging Wishlist into Library
+acquired_wishlist = input("Enter the name of the book from your wishlist that you've acquired (or press 'Enter' to skip): ")
+if acquired_wishlist in wishlist:
+    my_library.append(acquired_wishlist)
+    wishlist.remove(acquired_wishlist)
+    print("\nUpdated Library:", library)
+    print("Updated Wishlist: ", wishlist)
+#Step 6: Donate books
+donated_book = input("Enter the name of the book form you library that you wish to donate or press 'Enter to skip): ")
+if donated_book in library:
+    library.remove(donated_book)
+print("\nFinal Library after Donations: ", library)

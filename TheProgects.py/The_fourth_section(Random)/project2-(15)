@@ -1,0 +1,32 @@
+#episode 33
+#Coin toss project
+import random
+print("Welcome to the coin Guessing Game!")
+print("Choose a method to toss the coin:")
+print("1. Using random.random()")
+print("2. Using random.randint()")
+chosen_number = int(input("Enter your choice(1 or 2): "))
+if chosen_number == 1:
+    if random.random() >= 0.5:
+       computer_result = "heads"
+    else:
+       computer_result = "tails"     
+elif chosen_number == 2:
+  
+     if random.randint(0,1) == 0:
+       computer_result = "heads"
+     else:
+       computer_result ="tails"   
+else:
+   print("Invaild choice! please select either 1 or 2")      
+
+user_guess = input("Enter your guess (Heads or tails): ").lower()
+
+if user_guess.lower() == computer_result.lower():
+    print("Good! You win")
+    print(f"The computer's coin toss result was : {computer_result}")
+elif user_guess != computer_result:
+    print("Sorry! you lost")
+    print(f"The computer's coin toss result was: {computer_result}")
+else:
+    print("invaild answer...")

@@ -1,0 +1,17 @@
+words = {"Yes", "yes", "No", "no", "Maybe", "maybe"}
+user_input = input("Enter one of the required words: \n")
+if user_input in words:
+    print("you are answerd correctly")
+else:
+    print("your answer is incorrect")
+
+#another code
+typed = input("Please type (Yes), (No), or (Maybe) \n")
+if typed == "yes":
+    print (f"You typed {typed}")
+elif typed == "no":
+    print(f"you typed {typed}")
+elif typed == "maybe":
+    print(f"You typed {typed}")
+else:
+    print(f"You typed {typed}, which is not an option \nplease stick to the options")

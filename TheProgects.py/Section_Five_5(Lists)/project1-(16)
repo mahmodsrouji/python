@@ -1,0 +1,13 @@
+# The first project is 
+color = []
+fav_color = input("Add the first color you like: ")
+color.append(fav_color)
+command = input("Do you want to add more colors? Yes, or No? ").lower()
+if command == "yes":
+    fav_color = input("Add another color to the list: ")
+    color.append(fav_color)
+    print(f"The colors you like are {color} ")
+elif command == "no":
+    print(f"The color you like is: {color}")
+else:
+    print("invaild answer! please type (Yes) or (No)")

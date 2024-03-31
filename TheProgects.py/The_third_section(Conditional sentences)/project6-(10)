@@ -1,0 +1,26 @@
+#A way to write code that accepts both upper and lower letters options
+area = input("chose an area: (cario), (Alexandria), or (Tanta) ")
+if area.lower() == "cario":
+    print("You chose cario")
+elif area.lower() == "tanta":
+    print("Tanta is nice!")
+elif area.lower() == "alexandria":
+    print("Feels like summer!")
+else:
+    print(f"Sorry, {area} is not on our list!")
+#another thing, we need to condense the words into  one line instead of several lines
+#with "or"
+area = input("chose an area: (cario), (Alexandria), or (Tanta) ")
+if area.lower() == "cario" or area.lower() == "alexandria" or area.lower() == "tanta":
+    print(f"{area} is on our list!")
+else:
+    print(f"Sorry, {area} is not on our list!")
+
+
+#another example with "and".
+name = input("Please enter your name: \n").lower()
+password = input ("Please enter your password: \n")
+if name == "mahmoud" and password == "hiThere":
+    print("Welcome back!")
+else:
+    print("Sorry, wrong name or password")
