@@ -222,7 +222,7 @@ elif area.lower() == "alexandria":
     print("Feels like summer!")
 else:
     print(f"Sorry, {area} is not on our list!")
-#another thing, we need to condense the words into  one line instead of several lines
+#another thing, we need to condense the words into one line instead of several lines
 #with "or"
 area = input("chose an area: (cario), (Alexandria), or (Tanta) ")
 if area.lower() == "cario" or area.lower() == "alexandria" or area.lower() == "tanta":
@@ -248,12 +248,12 @@ if age >= 18:
     elif license == "no":
         print("Sorry, you cannot drive unlees you have a driving license!")
     else:
-        print(f"Sorry you entery of {license} is not understood")
+        print(f"Sorry you entry of {license} is not understood")
 else:
     print("You cannot drive unless you are 18 with a driving license exclusively")
 
 #another project
-is_syrian = input("Are you syria type (Yes) or (No) \n").lower()
+is_syrian = input("Are you syrian type (Yes) or (No) \n").lower()
 if is_syrian == "yes":
     print("Good, that the first step")
     is_18 = input("Are you above 18 type (yes) or (No)? \n").lower()
@@ -744,7 +744,7 @@ for name in names:
         print("Attendance Confirmed!")
     else:
         print("Attendeance not confirmed!")
-        print("-----")
+    print("-----")
 travel_list = input("Please type the names of the countries: ").split(", ")
 for country in  travel_list:
     print(f"\n{country}\n")
@@ -762,7 +762,7 @@ done_tasks = []
 ongoing_tasks = []
 tasks = input("Enter your tasks for today: ").split(", ")
 for task in tasks:
-    done = input(f"Did you finish {task} alredy? ").lower()
+    done = input(f"Did you finish {task} already? ").lower()
     if done == "yes":
         print("Nice Job")
         done_tasks.append(task)
@@ -775,7 +775,8 @@ if progress == "yes":
     print("\n******** Done Tasks ********\n")
     print(done_tasks)
     print("\n****** Ongoing Tasks ******\n")
-    print(ongoing_tasks)
+    print(ongoing_tasks,"\n")
+    input("Please hit Enter to exit ")
 else:
     input("Please hit Enter to exit ")
 
@@ -879,9 +880,302 @@ for name in names:
 print("Abbreviated Names: ")
 for x in list:
     print(x)
+# The second project is: 
+sentence = input("Enter a sentence: ").split()
+inverted_words = (sentence[::-1])
+print(inverted_words)
+inverted_sentence = " ".join(inverted_words)
+print("Reserved sentence:", inverted_sentence)
 
 
+# The episode 52:
+import string
+sentence = input("Please type a sentence ")
+new_sentence = " "
+for x in sentence:
+    if x not in string.punctuation:
+        new_sentence += x
+print("\n\n *** Here is the same sentence without pnctuation *** \n\n", new_sentence)
 
 
+# The episode 53:
+# important note: The method (join) is used to convert the list to plain test.
+# The project of the chpter:
+import random 
+import string
+print("Welcome to the password Generator!")
+length = int(input("Enter the total number of characters in the password: "))
+letters = int(input("Enter the number of letters in the password: "))
+numbers = int(input("Enter the number of numbers in the password: "))
+symbols = int(input("Enter the number of symbols in the password: "))
+if length != letters + numbers + symbols:
+    print("invaild input. The sum of letters, numbers, and symbols doesn't match the password")
+else:
+    A = random.choices(string.ascii_letters, k=letters)
+    B = random.choices(string.digits, k=numbers)
+    c = random.choices(string.punctuation, k=symbols)
+    shuffle = A + B + c
+    random.shuffle(shuffle)
+    password = ''.join(shuffle)
+    print(f"Generated Password: {password}")
+
+
+# The episode 55:
+def welcome():
+    print("Thanks for using the program. see you soon!")
+print("Welcome to the prgram")
+enter = input("Press Enter to exit ")
+welcome() 
+
+
+# The episode 58:
+correct_password = "a1b2c3"
+entered_password = input("Enter password: ")
+while entered_password != correct_password:
+    print("Incorrect password. Try again.")
+    entered_password = input("Enter password again: ")
+print("Access Granted!")
+# another project
+import random
+number = random.randint(1,10)
+guess_number = int(input("Guess a number between 1 and 10: "))
+while guess_number != number:
+    if guess_number < number:
+       guess_number = int(input("Too low! Guess again: "))
+    else: 
+       guess_number = int(input("Too high! Guess again: "))
+print("congratulations! You guessd the number!")
+
+# working on website of the Reeborg's world
+# Stamp the four "hurdle" on site
+# "https://reeborg.ca/reeborg.html?lang=en&mode=python&menu=worlds%2Fmenus%2Freeborg_intro_en.json&name=Hurdle%201&url=worlds%2Ftutorial_en%2Fhurdle1.json"
+
+
+# the episode 64
+import random 
+words = ["office", "panda", "cabin", "ginger"]
+random_word = random.choice(words)
+guess = input("Please guess a letter: ").lower()
+for letter in random_word:
+    if guess in letter:
+        print("Right")
+    else:
+        print("Wrong")
+
+
+# the episode 65
+import random
+words = ["good", "bad", "ugly"]
+random_word = random.choice(words)
+# اعرض مسافات بنفس عدد حروف الكلمة 
+display = []
+for letter in random_word:
+    display.append("_")
+print(display)
+# اطلب تخمين حرف
+guessed = input("please guess a letter: ").lower()
+# لو صحيح, بدل المسافة بحرف واعرض
+for position in range (len(random_word)):
+    if random_word[position] == guessed:
+        display[position] = guessed
+print(display)
+print(random_word)
+
+
+# the episode 66:
+import random
+words = ["good", "bad", "ugly"]
+random_word = random.choice(words)
+# اعرض مسافات بنفس عدد حروف الكلمة 
+display = []
+for letter in random_word:
+    display.append("_")
+print(display)
+while "_" in display:
+   guessed = input("Please guess a letter: ").lower()
+   for position in range (len(random_word)):
+      if random_word[position] == guessed:
+         display[position] = guessed
+   print(display)
+print("""
+         ********
+         YOU WIN!
+         ********
+""")
+   
+
+# the episode 67:
+import random
+words = ["good", "bad", "ugly"]
+random_word = random.choice(words)
+# اعرض مسافات بنفس عدد حروف الكلمة 
+display = []
+for letter in random_word:
+    display.append("_")
+print(display)
+lives = 6
+while "_" in display and lives > 0:
+   guessed = input("Please guess a letter: ").lower()
+   if guessed not in random_word:
+      lives -= 1
+   for position in range (len(random_word)):
+      if random_word[position] == guessed:
+         display[position] = guessed
+   print(display)
+   print(f" You have {lives} more tries")
+if lives == 0:
+   print("""
+         You Lose!
+   """)
+else:
+   print("""
+         ********
+         YOU WIN!
+         ********
+   """)
+
+
+# the episode 68:
+import random
+words = ["good", "bad", "ugly"]
+random_word = random.choice(words)
+# اعرض مسافات بنفس عدد حروف الكلمة 
+display = ["_"] * len(random_word)
+print(' '.join(display))
+lives = 6
+while "_" in display and lives > 0:
+   guessed = input("Please guess a letter: ").lower()
+   if guessed not in random_word:
+      lives -= 1
+   for position in range (len(random_word)):
+      if random_word[position] == guessed:
+         display[position] = guessed
+   print(' '.join(display))
+   print(f" You have {lives} more tries")
+if lives == 0:
+   print("""
+         You Lose!
+   """)
+else:
+   print("""
+         ********
+         YOU WIN!
+         ********
+   """)
+
+
+# the episode 69:
+for i in range (5):
+    if i == 2:
+        continue
+    print(i)
+
+for i in range (11):
+    if i % 2 != 0: 
+        continue
+    print(i)
+
+for i in range (6):
+   if i == 3:
+        print("I have to exit now ...")
+        break
+   print (i)
+
+
+# the episode 70:
+# finished the project of the chapter!
+import random
+hangmanpics = [''' 
+  +---+
+      |
+      |
+      |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+      |
+      |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+      |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+  |   |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+ /|   |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ /    |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ / \  |
+      |
+=========''']
+
+words = ["good", "bad", "ugly"]
+random_word = random.choice(words)
+# اعرض مسافات بنفس عدد حروف الكلمة 
+display = ["_"] * len(random_word)
+print(' '.join(display))
+print(hangmanpics[0])
+lives = 6
+invalid_words = []
+while "_" in display and lives > 0:
+   guessed = input("Please guess a letter: ").lower()
+   if guessed in invalid_words:
+      print("You have already type this answer! ")
+      print(f" You have {lives} more tries")
+      continue
+   invalid_words.append(guessed)
+   if guessed not in random_word:
+      lives -= 1
+      print(hangmanpics[7-lives])
+   else:
+      for position in range (len(random_word)):
+         if random_word[position] == guessed:
+            display[position] = guessed
+   print(' '.join(display))
+   print(f" You have {lives} more tries")
+if lives == 0:
+   print("""
+         You Lose!
+   """)
+else:
+   print("""
+         ********
+         YOU WIN!
+         ********
+   """)
 
 

@@ -1,0 +1,28 @@
+# in the way of brahim
+import random
+print("")
+number = random.randint(1,10)
+guess_number = int(input("Guess a number between 1 and 10: "))
+while guess_number != number:
+    if guess_number < number:
+        guess = int(input("Too low! Guess again: "))
+    else: 
+       guess = int(input("Too high! Guess again: "))
+print("congratulations! You guessd the number!")
+
+# in another way!
+
+import random
+
+print("Welcome to the Number Guessing Game!")
+number = random.randint(1, 10)
+
+while True:
+    guess_number = int(input("Guess a number between 1 and 10: "))
+    if guess_number == number:
+        print("Congratulations! You guessed the number!")
+        break
+    elif guess_number < number:
+        print("Too low! Guess again.")
+    else:
+        print("Too high! Guess again.")
